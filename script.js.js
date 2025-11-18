@@ -18,11 +18,13 @@ function uppdateraLista() {
 function läggTill() {
   const namn = document.getElementById("namn").value;
   const pris = document.getElementById("pris").value;
+const kategori = document.getElementById("kategori").value;
   if (namn && pris) {
-    produkter.push({ namn, pris });
+    produkter.push({ namn, pris, kategori });
     spara();
     uppdateraLista();
   }
 }
 
 uppdateraLista();
+li.textContent = `${p.namn} - ${p.pris} kr (${p.kategori})`;
